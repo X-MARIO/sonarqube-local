@@ -2,5 +2,5 @@ projectKey=react-sonarqube
 serverUrl=http://localhost:9000
 serverVersion=25.4.0.105899
 dashboardUrl=http://localhost:9000/dashboard?id=react-sonarqube
-ceTaskId=dbceecfe-f31e-4bff-8e06-5e5f23b14773
-ceTaskUrl=http://localhost:9000/api/ce/task?id=dbceecfe-f31e-4bff-8e06-5e5f23b14773
+ceTaskId=9eec07ee-ff61-4df8-8ed5-4aab14137461
+ceTaskUrl=http://localhost:9000/api/ce/task?id=9eec07ee-ff61-4df8-8ed5-4aab14137461
