@@ -26,6 +26,21 @@ docker-compose ps
 - Логин: `admin`
 - Пароль: `admin` (при первом входе потребуется изменить)
 
+## Настройка интеграции с GitHub Actions
+
+1. В SonarQube создайте новый проект:
+   - Перейдите в Administration -> Projects -> Management
+   - Создайте новый проект
+   - Получите токен доступа (Administration -> Security -> Users -> Tokens)
+
+2. В GitHub репозитории:
+   - Перейдите в Settings -> Secrets and variables -> Actions
+   - Создайте новый секрет с именем `SONAR_TOKEN` и значением токена из SonarQube
+
+3. В файле `.github/workflows/sonarqube.yml`:
+   - Замените `your-project-key` на ключ вашего проекта в SonarQube
+   - Убедитесь, что `SONAR_HOST_URL` указывает на правильный адрес вашего SonarQube
+
 ## Остановка SonarQube
 
 Для остановки контейнеров выполните:
@@ -44,4 +59,5 @@ docker-compose down -v
 
 - Все данные сохраняются в именованных томах Docker
 - PostgreSQL база данных настроена для хранения данных SonarQube
-- Контейнеры автоматически перезапускаются при сбоях (restart: unless-stopped) # sonarqube-local
+- Контейнеры автоматически перезапускаются при сбоях (restart: unless-stopped)
+- Для работы с GitHub Actions убедитесь, что SonarQube доступен из интернета
