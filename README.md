@@ -61,3 +61,7 @@ docker-compose down -v
 - PostgreSQL база данных настроена для хранения данных SonarQube
 - Контейнеры автоматически перезапускаются при сбоях (restart: unless-stopped)
 - Для работы с GitHub Actions убедитесь, что SonarQube доступен из интернета
+
+sonar \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_8e3ae896cd5cc896b590ede2bd6789935362ca82
